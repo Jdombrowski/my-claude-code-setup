@@ -4,10 +4,10 @@
 
 My Claude Code project's starter settings and Claude Code hooks and slash commands which include the following MCP servers
 
-* [Gemini CLI MCP](https://github.com/centminmod/gemini-cli-mcp-server)
-* [Cloudflare Documentation MCP](https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/docs-vectorize)
-* [Context 7 MCP](https://github.com/upstash/context7)
-* [Notion MCP](https://github.com/makenotion/notion-mcp-server)
+- [Gemini CLI MCP](https://github.com/centminmod/gemini-cli-mcp-server)
+- [Cloudflare Documentation MCP](https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/docs-vectorize)
+- [Context 7 MCP](https://github.com/upstash/context7)
+- [Notion MCP](https://github.com/makenotion/notion-mcp-server)
 
 ## Claude Code Hooks
 
@@ -18,12 +18,14 @@ The Claude Code hook is for `STOP` which uses Terminal-Notifier to show macOS de
 ### `/anthropic` Commands
 
 - **`/apply-thinking-to`** - Expert prompt engineering specialist that applies Anthropic's extended thinking patterns to enhance prompts with advanced reasoning frameworks
+
   - Transforms prompts using progressive reasoning structure (open-ended → systematic)
   - Applies sequential analytical frameworks and systematic verification with test cases
   - Includes constraint optimization, bias detection, and extended thinking budget management
   - Usage: `/apply-thinking-to @/path/to/prompt-file.md`
 
 - **`/convert-to-todowrite-tasklist-prompt`** - Converts complex, context-heavy prompts into efficient TodoWrite tasklist-based methods with parallel subagent execution
+
   - Achieves 60-70% speed improvements through parallel processing
   - Transforms verbose workflows into specialized task delegation
   - Prevents context overflow through strategic file selection (max 5 files per task)
@@ -62,6 +64,7 @@ The Claude Code hook is for `STOP` which uses Terminal-Notifier to show macOS de
 ### `/security` Commands
 
 - **`/security-audit`** - Perform comprehensive security audit of the codebase
+
   - Identifies potential vulnerabilities using OWASP guidelines
   - Checks authentication, input validation, data protection, and API security
   - Categorizes issues by severity (Critical, High, Medium, Low)
@@ -69,6 +72,7 @@ The Claude Code hook is for `STOP` which uses Terminal-Notifier to show macOS de
   - Usage: `/security-audit`
 
 - **`/check-best-practices`** - Analyze code against language-specific best practices
+
   - Detects languages and frameworks to apply relevant standards
   - Checks naming conventions, code organization, error handling, and performance
   - Provides actionable feedback with before/after code examples
@@ -96,6 +100,7 @@ The Claude Code hook is for `STOP` which uses Terminal-Notifier to show macOS de
 ### `/promptengineering` Commands
 
 - **`/convert-to-test-driven-prompt`** - Transform requests into Test-Driven Development style prompts
+
   - Defines explicit test cases with Given/When/Then format
   - Includes success criteria and edge cases
   - Structures prompts for red-green-refactor cycle
@@ -130,11 +135,11 @@ Claude Code offers a variety of settings to configure its behavior to meet your 
 The `settings.json` file is our official mechanism for configuring Claude
 Code through hierarchical settings:
 
-* **User settings** are defined in `~/.claude/settings.json` and apply to all
+- **User settings** are defined in `~/.claude/settings.json` and apply to all
   projects.
-* **Project settings** are saved in your project directory:
-  * `.claude/settings.json` for settings that are checked into source control and shared with your team
-  * `.claude/settings.local.json` for settings that are not checked in, useful for personal preferences and experimentation. Claude Code will configure git to ignore `.claude/settings.local.json` when it is created.
+- **Project settings** are saved in your project directory:
+  - `.claude/settings.json` for settings that are checked into source control and shared with your team
+  - `.claude/settings.local.json` for settings that are not checked in, useful for personal preferences and experimentation. Claude Code will configure git to ignore `.claude/settings.local.json` when it is created.
 
 #### Available settings
 
@@ -222,11 +227,11 @@ We are in the process of migrating global configuration to `settings.json`.
 
 To manage your configurations, use the following commands:
 
-* List settings: `claude config list`
-* See a setting: `claude config get <key>`
-* Change a setting: `claude config set <key> <value>`
-* Push to a setting (for lists): `claude config add <key> <value>`
-* Remove from a setting (for lists): `claude config remove <key> <value>`
+- List settings: `claude config list`
+- See a setting: `claude config get <key>`
+- Change a setting: `claude config set <key> <value>`
+- Push to a setting (for lists): `claude config add <key> <value>`
+- Remove from a setting (for lists): `claude config remove <key> <value>`
 
 By default `config` changes your project configuration. To manage your global configuration, use the `--global` (or `-g`) flag.
 
@@ -280,9 +285,9 @@ files by blocking Write operations to certain paths
 
 [Gemini CLI MCP](https://github.com/centminmod/gemini-cli-mcp-server)
 
-```bash
+````bash
 claude mcp add gemini-cli /pato/to/.venv/bin/python /pato/to//mcp_server.py -s user -e GEMINI_API_KEY='GEMINI_API_KEY' -e OPENROUTER_API_KEY='OPENROUTER_API_KEY'
-```
+```markdown
 
 ### Cloudflare MCP Documentation
 
@@ -290,7 +295,7 @@ claude mcp add gemini-cli /pato/to/.venv/bin/python /pato/to//mcp_server.py -s u
 
 ```bash
 claude mcp add --transport sse cf-docs https://docs.mcp.cloudflare.com/sse -s user
-```
+```markdown
 
 ### Context 7 MCP Server
 
@@ -298,7 +303,7 @@ claude mcp add --transport sse cf-docs https://docs.mcp.cloudflare.com/sse -s us
 
 ```bash
 claude mcp add --transport sse context7 https://mcp.context7.com/sse -s user
-```
+```markdown
 
 ### Notion MCP Server
 
@@ -306,8 +311,9 @@ claude mcp add --transport sse context7 https://mcp.context7.com/sse -s user
 
 ```bash
 claude mcp add-json notionApi '{"type":"stdio","command":"npx","args":["-y","@notionhq/notion-mcp-server"],"env":{"OPENAPI_MCP_HEADERS":"{\"Authorization\": \"Bearer ntn_API_KEY\", \"Notion-Version\": \"2022-06-28\"}"}}' -s user
-```
+```markdown
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=centminmod/my-claude-code-setup&type=Date)](https://www.star-history.com/#centminmod/my-claude-code-setup&Date)
+````

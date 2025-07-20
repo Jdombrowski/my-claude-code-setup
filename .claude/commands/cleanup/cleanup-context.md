@@ -4,7 +4,7 @@ You are a memory bank optimization specialist tasked with reducing token usage i
 
 ## Task Overview
 
-Analyze the project's memory bank files (CLAUDE-*.md, CLAUDE.md, README.md) to identify and eliminate token waste through:
+Analyze the project's memory bank files (CLAUDE-\*.md, CLAUDE.md, README.md) to identify and eliminate token waste through:
 
 1. **Duplicate content removal**
 2. **Obsolete file elimination**
@@ -16,11 +16,11 @@ Analyze the project's memory bank files (CLAUDE-*.md, CLAUDE.md, README.md) to i
 
 ### 1. Initial Assessment
 
-```bash
+````bash
 # Get comprehensive file size analysis
 find . -name "CLAUDE-*.md" -exec wc -c {} \; | sort -nr
 wc -c CLAUDE.md README.md
-```
+```markdown
 
 **Examine for:**
 
@@ -120,7 +120,7 @@ wc -c CLAUDE.md README.md
 ```markdown
 # CLAUDE-security-comprehensive.md
 
-**Status**: ✅ COMPLETE - All Security Implementations  
+**Status**: ✅ COMPLETE - All Security Implementations
 **Coverage**: [List of consolidated topics]
 
 ## Executive Summary
@@ -129,7 +129,7 @@ wc -c CLAUDE.md README.md
 ## [Topic 1] - [Original File 1 Content]
 [Essential information from first file]
 
-## [Topic 2] - [Original File 2 Content] 
+## [Topic 2] - [Original File 2 Content]
 [Essential information from second file]
 
 ## [Topic 3] - [Original File 3 Content]
@@ -137,7 +137,7 @@ wc -c CLAUDE.md README.md
 
 ## Consolidated [Cross-cutting Concerns]
 [Information that appeared in multiple files]
-```
+```markdown
 
 **Quality Standards:**
 
@@ -160,7 +160,7 @@ wc -c CLAUDE.md README.md
 ```bash
 # Create todo list for tracking
 TodoWrite with optimization phases and specific files
-```
+```markdown
 
 ### 2. Execute by Priority
 
@@ -181,7 +181,7 @@ TodoWrite with optimization phases and specific files
 ```bash
 # Calculate savings achieved
 find . -name "CLAUDE-*.md" -not -path "*/archive/*" -exec wc -c {} \; | awk '{sum+=$1} END {print sum}'
-```
+```markdown
 
 ## Expected Outcomes
 
@@ -251,12 +251,12 @@ find . -name "CLAUDE-*.md" -not -path "*/archive/*" -exec wc -c {} \; | awk '{su
 ## [Major Section 1]
 [Comprehensive coverage of subtopic]
 
-## [Major Section 2] 
+## [Major Section 2]
 [Comprehensive coverage of subtopic]
 
 ## [Cross-cutting Concerns]
 [Information spanning multiple original files]
-```
+```markdown
 
 ### Archive File Format
 
@@ -269,6 +269,7 @@ find . -name "CLAUDE-*.md" -not -path "*/archive/*" -exec wc -c {} \; | awk '{su
 
 ## Usage
 Reference when investigating similar issues or understanding implementation history.
-```
+```markdown
 
 This systematic approach ensures consistent, effective memory bank optimization while preserving all essential information and improving overall organization.
+````

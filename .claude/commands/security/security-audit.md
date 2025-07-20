@@ -5,11 +5,13 @@ Perform a comprehensive security audit of the codebase to identify potential vul
 ## Usage Examples
 
 ### Basic Usage
+
 "Run a security audit on this project"
 "Check for security vulnerabilities in the authentication module"
 "Scan the API endpoints for security issues"
 
 ### Specific Audits
+
 "Check for SQL injection vulnerabilities"
 "Audit the file upload functionality for security risks"
 "Review authentication and authorization implementation"
@@ -28,6 +30,7 @@ When performing a security audit:
 ### Security Checklist
 
 #### Authentication & Authorization
+
 - Password storage and hashing methods
 - Session management security
 - JWT implementation and validation
@@ -35,6 +38,7 @@ When performing a security audit:
 - Multi-factor authentication support
 
 #### Input Validation & Sanitization
+
 - SQL injection prevention
 - XSS (Cross-Site Scripting) protection
 - Command injection safeguards
@@ -42,6 +46,7 @@ When performing a security audit:
 - File upload validation
 
 #### Data Protection
+
 - Encryption in transit (HTTPS/TLS)
 - Encryption at rest
 - Sensitive data exposure
@@ -49,6 +54,7 @@ When performing a security audit:
 - PII handling compliance
 
 #### Common Vulnerabilities
+
 - CSRF protection
 - Clickjacking prevention
 - Security headers configuration
@@ -56,6 +62,7 @@ When performing a security audit:
 - Insecure direct object references
 
 #### API Security
+
 - Rate limiting implementation
 - API authentication methods
 - Input validation on endpoints
@@ -66,37 +73,47 @@ When performing a security audit:
 
 Provide a structured security report with:
 
-```markdown
+````markdown
 ## Security Audit Report
 
 ### Summary
+
 - Total issues found: X
 - Critical: X, High: X, Medium: X, Low: X
 
 ### Critical Issues
+
 #### 1. [Issue Name]
+
 - **Location**: file.js:line
 - **Description**: Detailed explanation
 - **Impact**: Potential consequences
 - **Remediation**: Specific fix with code example
 
 ### High Priority Issues
+
 [Similar format]
 
 ### Medium Priority Issues
+
 [Similar format]
 
 ### Low Priority Issues
+
 [Similar format]
 
 ### Recommendations
+
 - General security improvements
 - Best practices to implement
 - Tools and libraries to consider
-```
 
+```markdown
 Remember to:
+
 - Be specific about file locations and line numbers
 - Provide code examples for fixes
 - Explain the security impact clearly
 - Avoid false positives by understanding the context
+```
+````

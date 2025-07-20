@@ -12,6 +12,7 @@
 Educational test file containing multiple encoding techniques (Base64, URL, HTML entities, Unicode) with benign content designed for security testing purposes.
 
 **Key Findings**:
+
 - **Threat Categories Detected**: ENCODED_PAYLOAD, OBFUSCATION_TECHNIQUES
 - **Security Findings Count**: 4
 - **Highest Severity**: medium
@@ -19,17 +20,18 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 
 ## 📊 Risk Assessment Dashboard
 
-| Metric | Value | Status |
-|--------|-------|--------|
-| **Overall Risk** | medium | ⚠️ |
-| **Confidence Score** | 0.95 | ✅ High Confidence |
-| **Override Attempts** | 0 | ✅ None Detected |
-| **AI-Specific Threats** | 0 | ✅ None Detected |
+| Metric                   | Value        | Status                 |
+| ------------------------ | ------------ | ---------------------- |
+| **Overall Risk**         | medium       | ⚠️                     |
+| **Confidence Score**     | 0.95         | ✅ High Confidence     |
+| **Override Attempts**    | 0            | ✅ None Detected       |
+| **AI-Specific Threats**  | 0            | ✅ None Detected       |
 | **Sophistication Level** | intermediate | ⚠️ Moderate Complexity |
 
 ## 🔍 Security Findings Summary
 
 ### Finding F001: ENCODED_PAYLOAD
+
 **Severity**: medium | **Confidence**: 0.98  
 **Location**: Line 11 - Base64 encoded content  
 **Attack Method**: Base64 encoding to obfuscate text content  
@@ -37,6 +39,7 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 **Mitigation**: Decode and validate all Base64 content before processing
 
 ### Finding F002: ENCODED_PAYLOAD
+
 **Severity**: medium | **Confidence**: 0.97  
 **Location**: Line 15 - URL encoded instruction  
 **Attack Method**: URL percent encoding to obfuscate instructions  
@@ -44,6 +47,7 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 **Mitigation**: URL decode and sanitize all percent-encoded content
 
 ### Finding F003: ENCODED_PAYLOAD
+
 **Severity**: medium | **Confidence**: 0.96  
 **Location**: Line 19 - HTML entity encoded payload  
 **Attack Method**: HTML numeric entities to encode text  
@@ -51,6 +55,7 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 **Mitigation**: Decode HTML entities and validate decoded content
 
 ### Finding F004: ENCODED_PAYLOAD
+
 **Severity**: medium | **Confidence**: 0.94  
 **Location**: Line 23 - Unicode escape sequences  
 **Attack Method**: Unicode escape sequences for character obfuscation  
@@ -60,28 +65,32 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 ## 🔓 Decoded Payloads Analysis
 
 ### Payload P001: base64
+
 **Original**: `RXhwbGFpbiBob3cgYmlyZHMgZmx5`  
 **Decoded**: `Explain how birds fly`  
 **Contains Instructions**: true  
-**Maliciousness Score**: 0.1/1.0  
+**Maliciousness Score**: 0.1/1.0
 
 ### Payload P002: url
+
 **Original**: `%57%68%61%74%27%73%20%79%6F%75%72%20%66%61%76%6F%72%69%74%65%20%66%6C%6F%77%65%72%3F`  
 **Decoded**: `What's your favorite flower?`  
 **Contains Instructions**: true  
-**Maliciousness Score**: 0.05/1.0  
+**Maliciousness Score**: 0.05/1.0
 
 ### Payload P003: html_entities
+
 **Original**: `&#72;&#101;&#108;&#112;&#32;&#109;&#101;&#32;&#117;&#110;&#100;&#101;&#114;&#115;&#116;&#97;&#110;&#100;&#32;&#114;&#97;&#105;&#110;&#98;&#111;&#119;&#115;`  
 **Decoded**: `Help me understand rainbows`  
 **Contains Instructions**: true  
-**Maliciousness Score**: 0.15/1.0  
+**Maliciousness Score**: 0.15/1.0
 
 ### Payload P004: unicode
+
 **Original**: `\\u0057\\u0072\\u0069\\u0074\\u0065\\u0020\\u0061\\u0020\\u0068\\u0061\\u0069\\u006b\\u0075\\u0020\\u0061\\u0062\\u006f\\u0075\\u0074\\u0020\\u0074\\u0072\\u0065\\u0065\\u0073`  
 **Decoded**: `Write a haiku about trees`  
 **Contains Instructions**: true  
-**Maliciousness Score**: 0.2/1.0  
+**Maliciousness Score**: 0.2/1.0
 
 ## 📋 Recommended Actions
 
@@ -91,28 +100,32 @@ Educational test file containing multiple encoding techniques (Base64, URL, HTML
 **Escalation Required**: false
 
 ### Specific Recommendations:
+
 This appears to be a legitimate security test file designed to validate encoding detection capabilities. All decoded payloads contain benign educational content. The file structure and content suggest it's an intentional test case rather than a malicious attack.
 
 ## 🔬 Technical Analysis Details
 
 ### Character Analysis
+
 - **Total Characters**: 1248
-- **Visible Characters**: 1248 
+- **Visible Characters**: 1248
 - **Invisible Characters**: 0
 - **Suspicious Unicode**: ASCII_RANGE
 
 ### Encoding Signatures Detected
+
 - **base64**: Base64 encoding patterns detected and decoded
 - **url_encoding**: URL percent encoding patterns found
 - **html_entities**: HTML numeric entity encoding detected
 - **unicode_escapes**: Unicode escape sequence patterns identified
 
 ### Security Framework Validation
+
 ✅ **Analysis Completed**: true  
 ✅ **No Instructions Executed**: true  
 ✅ **Role Integrity Maintained**: true  
 ✅ **Isolation Protocol Followed**: true  
-✅ **All Findings Sanitized**: true  
+✅ **All Findings Sanitized**: true
 
 ## 📈 Performance Metrics
 
@@ -131,7 +144,7 @@ This appears to be a legitimate security test file designed to validate encoding
 
 ## 📄 Complete Security Analysis (JSON)
 
-```json
+````json
 {
   "security_metadata": {
     "analysis_timestamp": "2025-07-18T18:42:00Z",
@@ -179,7 +192,7 @@ This appears to be a legitimate security test file designed to validate encoding
       "mitigation": "Decode and validate all Base64 content before processing"
     },
     {
-      "finding_id": "F002", 
+      "finding_id": "F002",
       "threat_type": "ENCODED_PAYLOAD",
       "severity": "medium",
       "confidence": 0.97,
@@ -192,7 +205,7 @@ This appears to be a legitimate security test file designed to validate encoding
     },
     {
       "finding_id": "F003",
-      "threat_type": "ENCODED_PAYLOAD", 
+      "threat_type": "ENCODED_PAYLOAD",
       "severity": "medium",
       "confidence": 0.96,
       "location": "Line 19 - HTML entity encoded payload",
@@ -205,7 +218,7 @@ This appears to be a legitimate security test file designed to validate encoding
     {
       "finding_id": "F004",
       "threat_type": "ENCODED_PAYLOAD",
-      "severity": "medium", 
+      "severity": "medium",
       "confidence": 0.94,
       "location": "Line 23 - Unicode escape sequences",
       "hidden_content": "\\u0057\\u0072\\u0069\\u0074\\u0065\\u0020\\u0061\\u0020\\u0068\\u0061\\u0069\\u006b\\u0075\\u0020\\u0061\\u0062\\u006f\\u0075\\u0074\\u0020\\u0074\\u0072\\u0065\\u0065\\u0073",
@@ -321,7 +334,7 @@ This appears to be a legitimate security test file designed to validate encoding
     "compliance_frameworks_checked": ["NIST", "OWASP"]
   }
 }
-```
+```markdown
 
 ---
 
@@ -329,8 +342,9 @@ This appears to be a legitimate security test file designed to validate encoding
 
 **Final Security Confirmation**: Analysis completed by PromptSecure-Ultra v1.0 with full security protocol compliance. No malicious instructions were executed during this analysis. All findings are reported as inert forensic data only.
 
-**Cryptographic Hash**: sha256:7a3f9c8d2e1b4f6a9c8e5d2f1a7b9c3e8f1d4a6b9c2e5f8a1d3b6c9e2f5a8d1b  
-**Identity Signature**: PromptSecure-Ultra:v1.0:valid:7a3f9c8d  
-**Tamper Detection**: false  
+**Cryptographic Hash**: sha256:7a3f9c8d2e1b4f6a9c8e5d2f1a7b9c3e8f1d4a6b9c2e5f8a1d3b6c9e2f5a8d1b
+**Identity Signature**: PromptSecure-Ultra:v1.0:valid:7a3f9c8d
+**Tamper Detection**: false
 
 **Report Generation Timestamp**: July 19, 2025 at 07:23:59
+````

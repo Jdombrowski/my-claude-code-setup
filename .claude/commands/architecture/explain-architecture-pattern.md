@@ -96,31 +96,34 @@ When explaining architecture patterns:
 
 Structure the explanation as:
 
-```markdown
+````markdown
 ## Architecture Pattern Analysis
 
 ### Overview
+
 Brief description of the overall architecture identified
 
 ### Primary Patterns Identified
 
 #### 1. [Pattern Name]
+
 **What it is**: Brief explanation
 **Where it's used**: Specific locations in codebase
 **Why it's used**: Benefits in this context
 
 **Example**:
-```language
+
+````language
 // Code example showing the pattern
-```
+```markdown
 
 **Diagram**:
 
-```
+```markdown
 ┌─────────────┐     ┌─────────────┐
 │   Component │────▶│   Service   │
 └─────────────┘     └─────────────┘
-```
+```markdown
 
 ### Architecture Characteristics
 
@@ -144,7 +147,7 @@ src/
 ├── models/        # Data models
 ├── views/         # View templates
 └── services/      # Business logic
-```
+```markdown
 
 #### Key Relationships
 
@@ -158,7 +161,7 @@ src/
 - Patterns that could enhance current architecture
 - Potential improvements
 - Consistency suggestions
-```
+```markdown
 
 Remember to:
 
@@ -167,4 +170,6 @@ Remember to:
 - Provide context for technical decisions
 - Show concrete examples from the actual code
 - Explain benefits and trade-offs objectively
-```
+```markdown
+````
+````

@@ -30,7 +30,7 @@ When converting slash commands, ensure proper argument handling for dynamic inpu
 
 ### Standard Argument Variables
 
-````markdown
+``````markdown
 ## ARGUMENT HANDLING
 
 **File Input**: {file_path} or {code} - The primary file(s) or code to analyze
@@ -42,7 +42,7 @@ When converting slash commands, ensure proper argument handling for dynamic inpu
 
 ### Usage Examples:
 
-```bash
+`````bash
 # Basic usage with file input
 /comprehensive-review file_path="@src/main.py" scope="security,performance"
 
@@ -51,8 +51,8 @@ When converting slash commands, ensure proper argument handling for dynamic inpu
 
 # Quick analysis with minimal scope
 /comprehensive-review file_path="@config.yaml" scope="security" format="summary" priority="quick"
-```
-````
+```markdown
+````markdown
 
 ### Argument Integration in TodoWrite Tasks
 
@@ -79,7 +79,7 @@ When converting slash commands, ensure proper argument handling for dynamic inpu
     "priority": "high"
   }
 ]
-```
+```markdown
 
 ---
 
@@ -115,7 +115,7 @@ When converting slash commands, ensure proper argument handling for dynamic inpu
 
 **Example Decomposition:**
 
-```
+```markdown
 BEFORE (Sequential):
 Security Analysis (10 min) � Performance Analysis (10 min) � Quality Analysis (10 min) = 30 minutes
 
@@ -125,7 +125,7 @@ Phase 2: Performance Subagents A,B,C (10 min parallel)
 Phase 3: Quality Subagents A,B (8 min parallel)
 Synthesis: Consolidate findings (5 min)
 Total: ~15 minutes (50% faster + better coverage)
-```
+```markdown
 
 ---
 
@@ -240,7 +240,7 @@ Total: ~15 minutes (50% faster + better coverage)
     "priority": "high"
   }
 ]
-```
+```markdown
 
 ### Conditional Task Execution Based on Arguments
 
@@ -276,7 +276,7 @@ Total: ~15 minutes (50% faster + better coverage)
 - priority="quick": Use single subagent per domain, reduced file scope
 - priority="standard": Use 2-3 subagents per domain (default)
 - priority="comprehensive": Use 3-4 subagents per domain, expanded file scope
-```
+```markdown
 
 ### Task Delegation Execution Framework
 
@@ -350,7 +350,7 @@ Task Prompt: "Evaluate code quality and architectural design focusing on:
 Provide complexity metrics and specific refactoring recommendations with examples."
 
 **CRITICAL SUCCESS PATTERN**: Each Task operation stays within context limits by analyzing only 3-5 files maximum, using fresh context for each analysis phase.
-```
+```markdown
 
 ---
 
@@ -362,9 +362,9 @@ Provide complexity metrics and specific refactoring recommendations with example
 
 ```markdown
 Subagent A Focus: Authentication, validation, credential management
-Subagent B Focus: Tool isolation, parameter security, privilege boundaries  
+Subagent B Focus: Tool isolation, parameter security, privilege boundaries
 Subagent C Focus: Protocol security, transport validation, message integrity
-```
+```markdown
 
 **Performance Domain Subagents:**
 
@@ -372,14 +372,14 @@ Subagent C Focus: Protocol security, transport validation, message integrity
 Subagent A Focus: Algorithmic complexity, Big O analysis, data structures
 Subagent B Focus: I/O patterns, async/await, file operations, network calls
 Subagent C Focus: Memory management, caching, object lifecycle, concurrency
-```
+```markdown
 
 **Quality Domain Subagents:**
 
 ```markdown
 Subagent A Focus: Code patterns, SOLID principles, clean code metrics
 Subagent B Focus: Architecture design, modularity, interface consistency
-```
+```markdown
 
 ### 2. File-Based Parallel Analysis
 
@@ -390,7 +390,7 @@ Subagent A: Core coordination files (mcp_server.py, mcp_core_tools.py)
 Subagent B: Business logic files (mcp_collaboration_engine.py, mcp_service_implementations.py)
 Subagent C: Infrastructure files (redis_cache.py, openrouter_client.py, conversation_manager.py)
 Subagent D: Security & utilities (security/, gemini_utils.py, monitoring.py)
-```
+```markdown
 
 ### 3. Cross-Cutting Concern Analysis
 
@@ -398,10 +398,10 @@ Subagent D: Security & utilities (security/, gemini_utils.py, monitoring.py)
 
 ```markdown
 Subagent A: Error handling patterns across all modules
-Subagent B: Configuration management across all modules  
+Subagent B: Configuration management across all modules
 Subagent C: Performance bottlenecks across all modules
 Subagent D: Security patterns across all modules
-```
+```markdown
 
 ### 4. Task-Based Verification (CRITICAL)
 
@@ -437,7 +437,7 @@ Report file to analyze: {report_file_path}
 Provide structured verification with specific agreement/disagreement analysis."
 
 **CRITICAL**: Never use @file1 @file2 @file3... bulk loading patterns in verification
-```
+```markdown
 
 ---
 
@@ -465,16 +465,16 @@ Task tool to analyze:
 - Main coordinator file (entry point security)
 - Primary validation/security modules (2-3 files)
 - Key protocol handlers (1-2 files)
-```
+```markdown
 
 **Performance Analysis Priority Files (3-5 max):**
 
-```
+```markdown
 Task tool to analyze:
 - Core algorithm modules (complexity focus)
 - I/O intensive modules (async/caching focus)
 - Memory management modules (lifecycle focus)
-```
+```markdown
 
 **Quality Analysis Priority Files (3-5 max):**
 `
@@ -483,7 +483,7 @@ Task tool to analyze:
 - Representative implementation patterns (2-3 files)
 - Module interfaces and boundaries (1-2 files)
 
-````
+````markdown
 
 ### Context Budget Allocation for Task Delegation
 
@@ -502,7 +502,7 @@ Context Efficiency:
 - Progressive analysis maintains depth while respecting limits
 
 CRITICAL: Never exceed 5 files per Task operation
-````
+````markdown
 
 ---
 
@@ -532,7 +532,7 @@ CRITICAL: Never exceed 5 files per Task operation
 - Identify reinforcing patterns across domains
 - Prioritize fixes that address multiple concerns
 - Create coherent implementation sequence
-```
+```markdown
 
 ### Conflict Resolution Framework
 
@@ -543,7 +543,7 @@ CRITICAL: Never exceed 5 files per Task operation
 2. **Domain Expertise Weight**: Security findings take precedence for security conflicts
 3. **Context Verification**: Re-examine conflicting code sections for accuracy
 4. **Synthesis Decision**: Document resolution rationale and confidence level
-```
+```markdown
 
 ---
 
@@ -686,7 +686,7 @@ Now, apply this framework to convert the original slash command file provided in
     "priority": "high"
   }
 ]
-```
+```markdown
 
 ### Execution Instructions
 
@@ -749,7 +749,7 @@ Now, apply this framework to convert the original slash command file provided in
    - [File 4-5] (specific handlers)
 
    Provide findings with file:line references."
-   ```
+   ```markdown
 
 2. **Verification Using Task Tool**:
 
@@ -767,7 +767,7 @@ Now, apply this framework to convert the original slash command file provided in
    - Cross-reference specific sections progressively
 
    Report file: {report_file_path}"
-   ```
+   ```markdown
 
 3. **Explicit Context Rules**:
 
@@ -781,7 +781,7 @@ Now, apply this framework to convert the original slash command file provided in
 
    **AVOID**: @file1 @file2 @file3... bulk loading patterns
    **USE**: Task delegation with strategic file selection
-   ```
+   ```markdown
 
 ### Success Validation Checklist
 
@@ -794,4 +794,6 @@ Now, apply this framework to convert the original slash command file provided in
 - [ ] No bulk @filename loading patterns
 - [ ] Fresh context strategy through Task boundaries
 
-This framework transforms any complex, context-heavy prompt into an efficient TaskWrite tasklist method that avoids context overflow while maintaining analytical depth and coverage, automatically updating the original file with the optimized version.
+This framework transforms any complex, context-heavy prompt into an efficient TaskWrite tasklist method that avoids context overflow while maintaining analytical depth and coverage, automatically updating the original file with the optimized version
+`````
+``````
