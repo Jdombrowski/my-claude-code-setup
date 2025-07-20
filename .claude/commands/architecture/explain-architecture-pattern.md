@@ -5,11 +5,13 @@ Identify and explain architectural patterns, design patterns, and structural dec
 ## Usage Examples
 
 ### Basic Usage
+
 "Explain the architecture pattern used in this project"
 "What design patterns are implemented in the auth module?"
 "Analyze the folder structure and explain the architecture"
 
 ### Specific Pattern Analysis
+
 "Is this using MVC, MVP, or MVVM?"
 "Explain the microservices architecture here"
 "What's the event-driven pattern in this code?"
@@ -28,6 +30,7 @@ When explaining architecture patterns:
 ### Common Architecture Patterns
 
 #### Application Architecture
+
 - **MVC (Model-View-Controller)**
 - **MVP (Model-View-Presenter)**
 - **MVVM (Model-View-ViewModel)**
@@ -40,6 +43,7 @@ When explaining architecture patterns:
 - **Domain-Driven Design (DDD)**
 
 #### Design Patterns
+
 - **Creational**: Factory, Singleton, Builder, Prototype
 - **Structural**: Adapter, Decorator, Facade, Proxy
 - **Behavioral**: Observer, Strategy, Command, Iterator
@@ -47,6 +51,7 @@ When explaining architecture patterns:
 - **Architectural**: Repository, Unit of Work, CQRS
 
 #### Frontend Patterns
+
 - **Component-Based Architecture**
 - **Flux/Redux Pattern**
 - **Module Federation**
@@ -54,6 +59,7 @@ When explaining architecture patterns:
 - **State Management Patterns**
 
 #### Backend Patterns
+
 - **RESTful Architecture**
 - **GraphQL Schema Design**
 - **Service Layer Pattern**
@@ -63,6 +69,7 @@ When explaining architecture patterns:
 ### Analysis Areas
 
 #### Code Organization
+
 - Project structure rationale
 - Module boundaries and responsibilities
 - Separation of concerns
@@ -70,6 +77,7 @@ When explaining architecture patterns:
 - Configuration patterns
 
 #### Data Flow
+
 - Request/response cycle
 - State management
 - Event propagation
@@ -77,6 +85,7 @@ When explaining architecture patterns:
 - Caching strategies
 
 #### Integration Points
+
 - API design patterns
 - Database access patterns
 - Third-party integrations
@@ -106,6 +115,7 @@ Brief description of the overall architecture identified
 ```
 
 **Diagram**:
+
 ```
 ┌─────────────┐     ┌─────────────┐
 │   Component │────▶│   Service   │
@@ -115,17 +125,20 @@ Brief description of the overall architecture identified
 ### Architecture Characteristics
 
 #### Strengths
+
 - [Strength 1]: How it benefits the project
 - [Strength 2]: Specific advantages
 
 #### Trade-offs
+
 - [Trade-off 1]: What was sacrificed
 - [Trade-off 2]: Complexity added
 
 ### Implementation Details
 
 #### File Structure
-```
+
+```markdown
 src/
 ├── controllers/    # MVC Controllers
 ├── models/        # Data models
@@ -134,18 +147,24 @@ src/
 ```
 
 #### Key Relationships
+
 - How components interact
 - Dependency flow
 - Communication patterns
 
 ### Recommendations
+
+```markdown
 - Patterns that could enhance current architecture
 - Potential improvements
 - Consistency suggestions
 ```
 
 Remember to:
+
+```markdown
 - Use clear, accessible language
 - Provide context for technical decisions
 - Show concrete examples from the actual code
 - Explain benefits and trade-offs objectively
+```
